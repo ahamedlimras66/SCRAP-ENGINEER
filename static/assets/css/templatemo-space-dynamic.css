@@ -947,11 +947,11 @@ About Us Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 0px 0px 0px 0px;
+  padding: 100px 0px 80px 0px;
 }
 
 .about-us .left-image {
-  margin-right: 55px;
+  margin-right: 45px;
 }
 
 .about-us .services .item {
@@ -964,7 +964,7 @@ About Us Style
 }
 
 .about-us .services .item .icon img {
-  max-width: 90px;
+  max-width: 70px;
 }
 
 .about-us .services .item h4 {
@@ -977,6 +977,7 @@ About Us Style
 .about-us .services .item p {
   color: #fff;
 }
+
 
 
 /*
