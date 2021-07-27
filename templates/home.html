@@ -20,7 +20,269 @@
     <link rel="stylesheet" href="/static/assets/css/templatemo-space-dynamic.css">
     <link rel="stylesheet" href="/static/assets/css/animated.css">
     <link rel="stylesheet" href="/static/assets/css/owl.css">
+    <style>
 
+      *,
+      *::before,
+      *::after {
+          box-sizing: border-box;
+      }
+
+      body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          background: #ffffff;
+      }
+
+      .timeline {
+          position: relative;
+          width: 100%;
+          max-width: 1140px;
+          margin: 0 auto;
+          padding: 15px 0;
+      }
+
+      .timeline::after {
+          content: '';
+          position: absolute;
+          width: 5px;
+          background: green;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          margin-left: -2.5px;
+      }
+
+      .containera {
+          padding: 30px 60px;
+          position: relative;
+          background: inherit;
+          width: 50%;
+      }
+
+      .containera.left {
+          left: 0;
+      }
+
+      .containera.right {
+          left: 50%;
+      }
+
+      .containera .icon {
+          position: absolute;
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          top: 30px;
+          right: -30px;
+          padding: 9px 0;
+          background: #ffffff;
+          border: 5px solid #E94B3C;
+          border-radius: 50px;
+          text-align: center;
+          font-size: 30px;
+          color: green;
+          z-index: 1;
+      }
+
+      .containera.right .icon {
+          left: -30px;
+      }
+
+      .containera .date {
+          position: absolute;
+          display: inline-block;
+          height: 30px;
+          min-width: 60px;
+          top: 45px;
+          padding: 6px 8px;
+          background: #E94B3C;
+          text-align: center;
+          font-size: 14px;
+          color: green;
+          z-index: -1;
+      }
+
+      .containera.left .date {
+          right: -86px;
+          border-radius: 0 30px 30px 0;
+      }
+
+      .container.right .date {
+          left: -86px;
+          border-radius: 30px 0 0 30px;
+      }
+
+      .containera::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 50px;
+        right: 28px;
+        z-index: 1;
+        border: 10px solid;
+        border-color: transparent #E94B3C transparent transparent;
+      }
+
+      .containera.right::before {
+        left: 28px;
+        border-color: transparent transparent transparent #E94B3C;
+      }
+
+      .containera .content {
+          padding: 30px 45px;
+          background: #ffffff;
+          position: relative;
+          border: 5px solid #eeeeee;
+          border-radius: 500px 0 500px 500px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+      }
+
+      .containera.right .content {
+          border-radius: 0 500px 500px 500px;
+      }
+
+      .containera .content h2 {
+          margin: 0 0 10px 0;
+          font-size: 18px;
+          font-weight: normal;
+          color: #E94B3C;
+      }
+
+      .containera .content p {
+          margin: 0;
+          font-size: 16px;
+          line-height: 22px;
+          color: #454545;
+      }
+
+      @media (max-width: 767.98px) {
+          .timeline::after {
+              left: 90px;
+          }
+
+          .containera {
+              width: 100%;
+              padding-left: 135px;
+              padding-right: 30px;
+          }
+
+          .containera.right {
+              left: 0%;
+          }
+
+          .containera.left .icon,
+          .containera.right .icon {
+              width: 45px;
+              height: 45px;
+              top: 37.5px;
+              font-size: 18px;
+              left: 67.5px;
+          }
+
+          .containera.left::before,
+          .containera.right::before {
+              left: 110px;
+              border-color: transparent transparent transparent #E94B3C;
+          }
+
+          .containera.left .date,
+          .containera.right .date {
+              right: auto;
+              left: 15px;
+              border-radius: 30px 0 0 30px;
+          }
+
+          .containera.left .content,
+          .containera.right .content {
+              border-radius: 0 500px 500px 500px;
+          }
+      }
+
+        .fcc-btn {
+          background-color: #199319;
+          color: white;
+          padding: 15px 25px;
+          text-decoration: none;
+        }
+        .button {
+      border-radius: 4px;
+      background-color: white;
+      border: none;
+      color: red;
+      text-align: center;
+      font-size: 18px;
+      padding: 10px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    body{margin-top:20px;}
+
+.align-center {
+    text-align: center;
+}
+.hash-list {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px){
+    .hash-list.cols-3 > li:nth-last-child(-n+3) {
+        border-bottom: none;
+    }
+}
+@media (min-width: 768px){
+    .hash-list.cols-3 > li {
+        width: 33.3333%;
+    }
+}
+.hash-list > li {
+    display: block;
+    float: left;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.pad-30, .pad-30-all > * {
+    padding: 30px;
+}
+img {
+    border: 0;
+}
+.mgb-20, .mgb-20-all > * {
+    margin-bottom: 20px;
+}
+.wpx-100, .wpx-100-after:after {
+    width: 100px;
+}
+.img-round, .img-rel-round {
+    border-radius: 50%;
+}
+.padb-30, .padb-30-all > * {
+    padding-bottom: 30px;
+}
+
+.mgb-40, .mgb-40-all > * {
+    margin-bottom: 40px;
+}
+.align-center {
+    text-align: center;
+}
+[class*="line-b"] {
+    position: relative;
+    padding-bottom: 20px;
+    border-color: #E6AF2A;
+}
+.fg-text-d, .fg-hov-text-d:hover, .fg-active-text-d.active {
+    color: #222;
+}
+.font-cond-b {
+    font-weight: 700 !important;
+}
+      </style>
 
 <!--
 
@@ -96,7 +358,7 @@ https://templatemo.com/tm-562-space-dynamic
             </div>
             <div class="col-lg-6">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="/static/assets/images/logo.png" alt="team meeting" width="100" height="200" >
+                <img src="/static/assets/images/logo.png" alt="team meeting" width="100" height="250" >
               </div>
             </div>
           </div>
@@ -178,13 +440,17 @@ https://templatemo.com/tm-562-space-dynamic
         </div>
         <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
           <div class="section-heading">
-            <h2>Grow your website with our <em>SEO</em> service &amp; <span>Project</span> Ideas</h2>
-            <p>Space Dynamic HTML5 template is free to use for your website projects. However, you are not permitted to redistribute the template ZIP file on any CSS template collection websites. Please contact us for more information. Thank you for your kind cooperation.</p>
+            <h2>
+
+ <em>IMPACT BYTRASHMAN</em>  &amp; <span>ACHIEVEMENT</span></h2>
           </div>
+          <br>
+              <br>
+                  <br>
           <div class="row">
             <div class="col-lg-12">
               <div class="first-bar progress-skill-bar">
-                <h4>Fat (5G)</h4>
+                <h4>Plastic</h4>
                 <span></span>
                 <div class="filled-bar"></div>
                 <div class="full-bar"></div>
@@ -192,7 +458,7 @@ https://templatemo.com/tm-562-space-dynamic
             </div>
             <div class="col-lg-12">
               <div class="second-bar progress-skill-bar">
-                <h4>Fiber (0G)</h4>
+                <h4>Paper</h4>
                 <span></span>
                 <div class="filled-bar"></div>
                 <div class="full-bar"></div>
@@ -200,7 +466,7 @@ https://templatemo.com/tm-562-space-dynamic
             </div>
             <div class="col-lg-12">
               <div class="third-bar progress-skill-bar">
-                <h4>Protein (6G)</h4>
+                <h4>Matel</h4>
                 <span></span>
                 <div class="filled-bar"></div>
                 <div class="full-bar"></div>
@@ -208,7 +474,7 @@ https://templatemo.com/tm-562-space-dynamic
             </div>
             <div class="col-lg-12">
               <div class="four-bar progress-skill-bar">
-                <h4>Carbs (0.6G)</h4>
+                <h4>Glass</h4>
                 <span></span>
                 <div class="filled-bar"></div>
                 <div class="full-bar"></div>
@@ -216,7 +482,7 @@ https://templatemo.com/tm-562-space-dynamic
             </div>
             <div class="col-lg-12">
               <div class="five-bar progress-skill-bar">
-                <h4>calories (78)</h4>
+                <h4>Wood</h4>
                 <span></span>
                 <div class="filled-bar"></div>
                 <div class="full-bar"></div>
@@ -228,15 +494,96 @@ https://templatemo.com/tm-562-space-dynamic
       </div>
     </div>
   </div>
+  <br>
+    <br>
+      <br>
+      <br>
+        <br>
+          <br><br>
+            <br>
+              <br><br>
+                <br>
+                  <br>
+  <section class="section" id="menu">
+      <div class="container">
+          <div class="row">
+
+          <center>  <h2><b> HOW SCRAP ENGINEER WORKS </b></h2></center>
+
+          <br>
+            <br>
+              <br>
+                  <div class="section-heading">
+                    <div class="timeline">
+                        <div class="containera left">
+                            <i class="icon fa fa-mobile"></i>
+
+                            <div class="content">
+                                <h2>Book your pickup</h2>
 
 
+                                <p>
+                                  Place your request through Trashman App or WhatsApp 7397377344
+                                    <h6> <a href="https://wa.me/917397377344/?text= Hai scrap engineer i have some order for you ,contact me soon! ">Click Me to open whatsapp</a></span></h6>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="containera right">
+                            <i class="icon fa fa-gift"></i>
+
+
+
+                            <div class="content">
+                                <h2>Door step collection</h2>
+                                <p>
+                                  Scrap items are cleared at your door-step in a click.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="containera left">
+                            <br>
+                            <i style="font-size:24px" class="icon fa">&#xf156;</i>
+
+
+
+                            <div class="content">
+                                <h2>Instant cash</h2>
+                                <p>
+                                    Immediate cash is given to customers based on computer generated invoice.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="containera right">
+
+                            <i style="font-size:24px" class="icon fa">&#x267B;</i>
+
+                            <div class="date">18 May</div>
+                            <div class="content">
+                                <h2>Sorted & recycled</h2>
+                                <p>
+                                  Collected items are segregated based on their grade and sent to recycling industries
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+  </section>
+  <br>
+    <br>
+      <br>
 
   <div id="portfolio" class="our-portfolio section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <h2>Meet the people who guide and motivate <em>TNPFA</em> achieve <span>greater success.</span></h2>
+            <h2>Meet the people who guide and motivate <em>SCRAP ENGINEER</em> achieve <span>greater success.</span></h2>
 
   <h2><b>  <ul> <span>Board of Directors </span></ul> </b></h2>
 
@@ -307,7 +654,7 @@ https://templatemo.com/tm-562-space-dynamic
         <br>
 
 
-    <center><li class="scroll-to-section"><div class="main-blue-button"><a href="/about">Read more </a></div></li></center>
+
 
   </div>
 
@@ -329,7 +676,7 @@ https://templatemo.com/tm-562-space-dynamic
       <div class="row">
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
           <div class="left-image">
-            <a href="#"><img src="/static/assets/images/big-blog-thumb.png" alt="app" width="250" height="700"></a>
+            <a href="#"><img src="/static/assets/images/big-blog-thumb.png" alt="app" width="200" height="700"></a>
             <div class="info">
               <div class="inner-content">
                 <ul>
@@ -341,11 +688,7 @@ https://templatemo.com/tm-562-space-dynamic
             </div>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+
             <br>
           </div>
 
@@ -356,41 +699,82 @@ https://templatemo.com/tm-562-space-dynamic
             <ul>
               <li>
                 <div class="left-content align-self-center">
-                  <span><i class="fa fa-calendar"></i> 18 Mar 2021</span>
-                  <a href="#"><h4>New Websites &amp; Backlinks</h4></a>
-                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+
+                  <a href="#"><h4>Login Page</h4></a>
+                  <p>Logged into a scrap engineer app with your details.</p>
                 </div>
                 <div class="right-image">
-                  <a href="#"><img src="/static/assets/images/a1.png" alt="" width="150" height="250"></a>
+                  <a href="#"><img src="/static/assets/images/a1.png" alt="" width="110" height="250"></a>
                 </div>
               </li>
               <li>
                 <div class="left-content align-self-center">
-                  <span><i class="fa fa-calendar"></i> 14 Mar 2021</span>
-                  <a href="#"><h4>SEO Analysis &amp; Content Ideas</h4></a>
-                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+
+                  <a href="#"><h4>Order Page</h4></a>
+                  <p>Click the order button in scrapengineer app.</p>
                 </div>
                 <div class="right-image">
-                  <a href="#"><img src="/static/assets/images/a2.png" alt="" width="150" height="250"></a>
+                  <a href="#"><img src="/static/assets/images/a2.png" alt="" width="110" height="250"></a>
                 </div>
               </li>
               <li>
                 <div class="left-content align-self-center">
-                  <span><i class="fa fa-calendar"></i> 06 Mar 2021</span>
-                  <a href="#"><h4>SEO Tips &amp; Digital Marketing</h4></a>
-                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+
+                  <a href="#"><h4>Order confirmation</h4></a>
+                  <p>Fill the details to confirm order scrapengineer.</p>
                 </div>
                 <div class="right-image">
-                  <a href="#"><img src="/static/assets/images/a3.png" alt="" width="150" height="250"></a>
+                  <a href="#"><img src="/static/assets/images/a3.png" alt="" width="110" height="250"></a>
                 </div>
               </li>
             </ul>
           </div>
         </div>
-        <center><li class="scroll-to-section"><div class="main-blue-button"><a href="/event">More Events</a></div></li></center>
+
       </div>
     </div>
   </div>
+  <div class="container">
+      <div class="mgb-40 padb-30 auto-invert line-b-4 align-center">
+          <h4 class="font-cond-l fg-accent lts-md mgb-10" contenteditable="false"></h4>
+          <h1 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false">Read Customer Reviews</h1>
+      </div>
+      <ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
+          <li>
+            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+            <p class="fs-110 font-cond-l" contenteditable="false">" Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "</p>
+            <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Martha Stewart</h5>
+            <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Business Woman - New York</small>
+          </li>
+          <li>
+            <img src="https://bootdey.com/img/Content/avatar/avatar4.png" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+            <p class="fs-110 font-cond-l" contenteditable="false">" Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "</p>
+            <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Ariana Menage</h5>
+            <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Recording Artist - Los Angeles</small>
+          </li>
+          <li>
+            <img src="https://bootdey.com/img/Content/avatar/avatar5.png" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+            <p class="fs-110 font-cond-l" contenteditable="false">" Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "</p>
+            <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Sean Carter</h5>
+            <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Fund Manager - Chicago</small>
+          </li>
+        </ul>
+  </div>
+</div>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br>
+
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
 
   <div id="contact" class="contact-us section">
     <div class="container">
@@ -400,7 +784,12 @@ https://templatemo.com/tm-562-space-dynamic
             <h2>Feel Free To Send Us a Message About Our Services</h2>
           <!--  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer ket eismod tempor incididunt ut labore et dolores</p> -->
             <div class="phone-info">
-              <h4>For any enquiry, Call Us: <span><i class="fa fa-phone"></i> <a href="#">010-020-0340</a></span></h4>
+              <h4>For any enquiry, Call Us: <span><i class="fa fa-phone"></i> <a href="tel:+917397377344">Click me to call</a></span></h4>
+              <br>
+                <h4>For any enquiry, Text Us: <span><i class="fa fa-whatsapp"></i> <a href="https://wa.me/917397377344/?text= Hai scrap engineer i have some order for you ,contact me soon! ">Click Me to open whatsapp</a></span></h4>
+
+
+
             </div>
           </div>
         </div>
